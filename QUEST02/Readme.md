@@ -1,4 +1,4 @@
-# AIFFEL Campus Online 5th Code Peer Review Templete
+# AIFFEL Campus Online 5th Code Peer Review
 - 코더 : 이수봉
 - 리뷰어 : 본인의 이름을 작성하세요.
 
