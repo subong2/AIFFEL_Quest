@@ -47,6 +47,15 @@ print('덧셈', c.add())
 # 아래 코드 이전에 self.status가 0으로 이미 할당되어 있었기 때문에 이후 코드에서 추가로 self.status = 0을 적어두지 않아도 괜찮지 않을까 생각했습니다.
 # 다만, 이례적인 경우를 대비해 언제나 확실하게 해 두는 습관도 중요하다 생각해 위의 체크박스에는 따로 이 부분을 감안하지 않았습니다. 
 
+class sticker_photo:
+  def __init__(self , img):
+    self.detector_hog = dlib.get_frontal_face_detector()
+    self.landmark_predictor = dlib.shape_predictor('./shape_predictor_68_face_landmarks.dat')
+    img = cv2.imread(img)
+    self.img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+    self.status = 0
+
  def pred_face(self):
     cp_img = copy.deepcopy(self.img)
     self.list_landmarks = []
