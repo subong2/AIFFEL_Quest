@@ -69,4 +69,7 @@ class sticker_photo:
     else :
       print('검출 된 얼굴이 없습니다. 다른 사진으로 시도해주세요')
       self.status = 0
+
+    plt.imshow(cp_img)
+    plt.show()
 ```
